@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number</title>
+</head>
+<body>
+  <h1>Q1. Check prime number from Prompt Box:</h1>
+  <!-- Q2. Prime Numbers    -->
+
+<form action="" id="form">
+    <label for="num">Give me a number:</label> <br>
+    <input type="number" id="num"> <br><br>
+    <button type="submit">Submit</button>
+</form>
+<h1 Style="color: rgb(11, 238, 60);"id="result"></h1>
+
+  <script>
+
+
+let form =document.getElementById("form");
+
+form.addEventListener("submit", function(event){
+    event.preventDefault()
+  let number = Number(document.getElementById("num").value);
+  let res = document.getElementById("result");
+
+    if (IsPrime(number)){
+    res.innerText= `${number} is a Prime Number`;
+    }else{
+    res.innerText= `${number} is not a Prime Number`;
+    }
+
+});
+
+
+function IsPrime (num){
+    if (num < 2){ return false}
+    for(let i=2; i<num; i++){
+        if(num % i === 0){
+            return false;
+        }
+    }
+    return true;
+}
+
+
+
+
+
+
+  </script>
+</body>
+</html>

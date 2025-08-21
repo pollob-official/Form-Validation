@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maximum Number</title>
+</head>
+<body>
+    <!-- <h1>Q2. Find out Maximum among three numbers</h1> -->
+
+<script>
+
+    let a = Number(prompt("Enter first number:"));
+    let b = Number(prompt("Enter second number:"));
+    let c = Number(prompt("Enter third number:"));
+
+let largest;
+
+if (a >= b && a >= c) {
+  largest = a;
+} else if (b >= a && b >= c) {
+  largest = b;
+} else {
+  largest = c;
+}
+
+document.write(`<h1>Q3. The maximum among ${a}, ${b}, ${c} numbers is: <b style="color:red"> ${largest} </b> </h1>`);
+
+
+
+
+
+</script>
+</body>
+</html>
